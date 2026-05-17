@@ -34,4 +34,5 @@ security:
       - ^postcss$
   node:
     permissions:
-      - --allow-fs-read=/
+      allowAddons: true
+      allowChildProcess: true
