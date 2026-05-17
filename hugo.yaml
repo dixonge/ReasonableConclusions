@@ -30,8 +30,10 @@ permalinks:
 security:
   exec:
     allow:
-      - ^npx$
-      - ^postcss$
+      - '^dart-sass-embedded$'
+      - '^go$'
+      - '^npx$'
+      - '^postcss$'
   node:
     permissions:
       allowAddons: true
