@@ -3,7 +3,7 @@
   command = "npm install && hugo --gc --minify"
 
 [build.environment]
-  HUGO_VERSION = "0.125.0" # Match your local version
+  HUGO_VERSION = "0.157.0" # Match your local version
   HUGO_ENV = "production"
   NODE_VERSION = "26.0.0"
   GO_VERSION = "1.26.3"
