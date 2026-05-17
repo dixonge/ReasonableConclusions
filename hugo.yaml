@@ -26,3 +26,12 @@ permalinks:
     docs: /:sections[1:]/:slug/
   section:
     docs: /:sections[1:]
+
+security:
+  exec:
+    allow:
+      - ^npx$
+      - ^postcss$
+  node:
+    permissions:
+      - --allow-fs-read=.
