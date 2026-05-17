@@ -32,6 +32,7 @@ security:
     allow:
       - '^dart-sass-embedded$'
       - '^go$'
+      - '^node$'
       - '^npm$'
       - '^npx$'
       - '^postcss$'
