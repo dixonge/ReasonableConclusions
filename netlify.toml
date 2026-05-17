@@ -4,3 +4,9 @@
 
 [build.environment]
   HUGO_VERSION = "0.161.1" # Match your local version
+  HUGO_ENV = "production"
+  NODE_VERSION = "26.0.0"
+  GO_VERSION = "1.26.4"
+
+[context.deploy-preview]
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
