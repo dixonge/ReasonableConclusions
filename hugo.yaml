@@ -23,6 +23,6 @@ params:
 
 permalinks:
   page:
-    docs: /:sections[1:]/:slug
+    docs: /:sections[1:]/:slug/
   section:
     docs: /:sections[1:]
