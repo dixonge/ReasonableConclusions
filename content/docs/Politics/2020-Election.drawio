@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="97916047-d0de-89f5-080d-49f4d83e522f">
+    <mxGraphModel dx="2014" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="2020 Elections&#xa;Censoring Americans" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="641" y="190" width="262" height="78.6" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="8mUJGmUW6T9Jdl6dIGD1-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="8mUJGmUW6T9Jdl6dIGD1-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="8mUJGmUW6T9Jdl6dIGD1-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=4;" edge="1" parent="1" source="3" target="8mUJGmUW6T9Jdl6dIGD1-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=4;" edge="1" parent="1" source="3" target="8mUJGmUW6T9Jdl6dIGD1-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="DHS" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="500" y="355.5" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeWidth=4;endArrow=block;endFill=1;fontStyle=1;strokeColor=#23445D;" parent="1" source="2" target="3" edge="1">
+          <mxGeometry x="22" y="165.5" width="100" height="100" as="geometry">
+            <mxPoint x="22" y="265.5" as="sourcePoint" />
+            <mxPoint x="122" y="165.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=4;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-55" target="8mUJGmUW6T9Jdl6dIGD1-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-55" value="State Department" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="680" y="355.5" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-77" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-56" target="8mUJGmUW6T9Jdl6dIGD1-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-56" value="DNC" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="820" y="355.5" width="83" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-78" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-57" target="8mUJGmUW6T9Jdl6dIGD1-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-57" value="Common Cause" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="950" y="355.5" width="78" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-79" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-58" target="8mUJGmUW6T9Jdl6dIGD1-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-58" value="NAACP" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="355.5" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-60" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeWidth=4;endArrow=block;endFill=1;fontStyle=1;strokeColor=#23445D;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="8mUJGmUW6T9Jdl6dIGD1-55">
+          <mxGeometry x="22" y="165.5" width="100" height="100" as="geometry">
+            <mxPoint x="782" y="279" as="sourcePoint" />
+            <mxPoint x="520" y="366" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-61" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeWidth=4;endArrow=block;endFill=1;fontStyle=1;strokeColor=#23445D;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="8mUJGmUW6T9Jdl6dIGD1-57">
+          <mxGeometry x="22" y="165.5" width="100" height="100" as="geometry">
+            <mxPoint x="860" y="590" as="sourcePoint" />
+            <mxPoint x="598" y="677" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-62" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeWidth=4;endArrow=block;endFill=1;fontStyle=1;strokeColor=#23445D;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="8mUJGmUW6T9Jdl6dIGD1-58">
+          <mxGeometry x="22" y="165.5" width="100" height="100" as="geometry">
+            <mxPoint x="1302" y="620" as="sourcePoint" />
+            <mxPoint x="1040" y="707" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-63" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeWidth=4;endArrow=block;endFill=1;fontStyle=1;strokeColor=#23445D;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="8mUJGmUW6T9Jdl6dIGD1-56">
+          <mxGeometry x="22" y="165.5" width="100" height="100" as="geometry">
+            <mxPoint x="1272" y="210" as="sourcePoint" />
+            <mxPoint x="1010" y="297" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-74" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-64" target="8mUJGmUW6T9Jdl6dIGD1-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="CISA" tooltip="Cybersecurity Infrastructure Security Agency" id="8mUJGmUW6T9Jdl6dIGD1-64">
+          <mxCell style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+            <mxGeometry x="440" y="490" width="80" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-75" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-69" target="8mUJGmUW6T9Jdl6dIGD1-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="EI-ISAC" tooltip="Elections Infrastructure Information Sharing &amp; Analysis Center" id="8mUJGmUW6T9Jdl6dIGD1-69">
+          <mxCell style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+            <mxGeometry x="560" y="490" width="80" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-76" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-71" target="8mUJGmUW6T9Jdl6dIGD1-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="GEC" tooltip="Global Engagement Center" id="8mUJGmUW6T9Jdl6dIGD1-71">
+          <mxCell style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="680" y="490" width="100" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-81" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-73" target="8mUJGmUW6T9Jdl6dIGD1-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-73" value="Filed Tickets for Social Media content suppression and/or removal" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="490" y="630" width="610" height="41.4" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-84" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-85" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-87" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-88" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-89" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-90" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-92" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-94" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-96" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;dashed=1;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-80" target="8mUJGmUW6T9Jdl6dIGD1-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-80" value="Election Integrity Partnership" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="650" y="710" width="290" height="41.4" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-103" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-83" target="8mUJGmUW6T9Jdl6dIGD1-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="SIO" tooltip="Stanford Internet Observatory - Stanford University" id="8mUJGmUW6T9Jdl6dIGD1-83">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;" vertex="1" parent="1">
+            <mxGeometry x="490" y="822.1" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="CIP" tooltip="Center for an Informed Public - University of Washington" id="8mUJGmUW6T9Jdl6dIGD1-86">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;" vertex="1" parent="1">
+            <mxGeometry x="650" y="822.1" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Graphika" tooltip="Social Media Analytics firm" id="8mUJGmUW6T9Jdl6dIGD1-91">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;" vertex="1" parent="1">
+            <mxGeometry x="970" y="822.1" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-107" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-93" target="8mUJGmUW6T9Jdl6dIGD1-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="DFR Lab" tooltip="Digital Forensic Research Lab - Atlantic Council" id="8mUJGmUW6T9Jdl6dIGD1-93">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;" vertex="1" parent="1">
+            <mxGeometry x="810" y="822.1" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-98" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-95" target="8mUJGmUW6T9Jdl6dIGD1-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-95" value="Report on the 2020 Election:" style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="700.7" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-97" value="&lt;ul&gt;&lt;li&gt;4,832 URL&#39;s targeted&lt;/li&gt;&lt;li&gt;859 Million tweets collected&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="800" width="290" height="80" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: normal; background-color: initial;&quot;&gt;Funding:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;Craig Newmark Philanthropies&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;William and Flora Hewlett Foundation&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" tooltip="Stanford Internet Observatory - Stanford University" id="8mUJGmUW6T9Jdl6dIGD1-102">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;align=left;" vertex="1" parent="1">
+            <mxGeometry x="280" y="930" width="250" height="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: normal; background-color: initial;&quot;&gt;Funding:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;Craig Newmark Philanthropies&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;William and Flora Hewlett Foundation&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;Omidyar Network&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;John S. and James L. Knight Foundation&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;National Science Foundation&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;Eunice Kennedy Shriver NICHHD&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;UW Population Health Initiative&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;Microsoft&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" tooltip="Stanford Internet Observatory - Stanford University" id="8mUJGmUW6T9Jdl6dIGD1-104">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=1;align=left;" vertex="1" parent="1">
+            <mxGeometry x="570" y="930" width="250" height="300" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8mUJGmUW6T9Jdl6dIGD1-105" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="8mUJGmUW6T9Jdl6dIGD1-86" target="8mUJGmUW6T9Jdl6dIGD1-104">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 14px;&quot;&gt;Funding:&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Atlantic Council&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" tooltip="Digital Forensic Research Lab - Atlantic Council" id="8mUJGmUW6T9Jdl6dIGD1-106">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=0;" vertex="1" parent="1">
+            <mxGeometry x="860" y="930" width="120" height="100" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;font style=&quot;font-size: 14px;&quot;&gt;Funding:&lt;/font&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Omidyar Network&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" tooltip="Digital Forensic Research Lab - Atlantic Council" id="8mUJGmUW6T9Jdl6dIGD1-108">
+          <mxCell style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;rounded=1;shadow=1;gradientColor=none;fontStyle=0;" vertex="1" parent="1">
+            <mxGeometry x="1010" y="930" width="120" height="100" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

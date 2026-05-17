@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.2" ID="73C5C4B7-2818-424D-85B0-41570B8C9460">
+  <Notes>
+    <Note ID="0" FontSize="28.0" Position="336.9,6.7" Width="305.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+      </Appearance>
+      <String>2020 Election
+Censoring Americans</String>
+      <ConnectedNoteIDs>1-5</ConnectedNoteIDs>
+      <PointsToNoteIDs>1-5</PointsToNoteIDs>
+      <Formatting>
+        <FormatRange Bold="Yes">0,33</FormatRange>
+      </Formatting>
+    </Note>
+    <Note ID="1" FontSize="18.0" Position="166.1,125.3" Width="55.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.9812 0.9304 0.6851</Fill>
+      </Appearance>
+      <String>DHS</String>
+      <ConnectedNoteIDs>0, 6, 8</ConnectedNoteIDs>
+      <PointsToNoteIDs>6, 8</PointsToNoteIDs>
+    </Note>
+    <Note ID="2" FontSize="18.0" Position="286.7,126.0" Width="116.9">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.9812 0.9304 0.6851</Fill>
+      </Appearance>
+      <String>State Department</String>
+      <ConnectedNoteIDs>0, 9</ConnectedNoteIDs>
+      <PointsToNoteIDs>9</PointsToNoteIDs>
+    </Note>
+    <Note ID="3" FontSize="18.0" Position="431.0,126.0" Width="55.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.7837 0.9758 0.6903</Fill>
+      </Appearance>
+      <String>DNC</String>
+      <ConnectedNoteIDs>0, 10</ConnectedNoteIDs>
+      <PointsToNoteIDs>10</PointsToNoteIDs>
+    </Note>
+    <Note ID="4" FontSize="18.0" Position="528.0,126.0" Width="89.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.7837 0.9758 0.6903</Fill>
+      </Appearance>
+      <String>Common Cause</String>
+      <ConnectedNoteIDs>0, 10</ConnectedNoteIDs>
+      <PointsToNoteIDs>10</PointsToNoteIDs>
+    </Note>
+    <Note ID="5" FontSize="18.0" Position="646.3,125.6" Width="81.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.7837 0.9758 0.6903</Fill>
+      </Appearance>
+      <String>NAACP</String>
+      <ConnectedNoteIDs>0, 10</ConnectedNoteIDs>
+      <PointsToNoteIDs>10</PointsToNoteIDs>
+    </Note>
+    <Note ID="6" FontSize="18.0" Position="183.7,196.0" Width="82.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.761 0.714 0.141</Fill>
+      </Appearance>
+      <String>EI-ISAC</String>
+      <ConnectedNoteIDs>1, 10</ConnectedNoteIDs>
+      <PointsToNoteIDs>10</PointsToNoteIDs>
+    </Note>
+    <Note ID="8" FontSize="18.0" Position="112.5,195.8" Width="59.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.761 0.714 0.141</Fill>
+      </Appearance>
+      <String>CISA</String>
+      <ConnectedNoteIDs>1, 10</ConnectedNoteIDs>
+      <PointsToNoteIDs>10</PointsToNoteIDs>
+    </Note>
+    <Note ID="9" FontSize="18.0" Position="316.5,196.0" Width="56.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.761 0.714 0.141</Fill>
+      </Appearance>
+      <String>GEC</String>
+      <ConnectedNoteIDs>2, 10</ConnectedNoteIDs>
+      <PointsToNoteIDs>10</PointsToNoteIDs>
+    </Note>
+    <Note ID="10" FontSize="14.0" Position="249.1,266.2" Width="479.4">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+      </Appearance>
+      <String>Filed Tickets for Social Media content suppression and/or removal</String>
+      <ConnectedNoteIDs>3-6, 8-9, 11</ConnectedNoteIDs>
+      <PointsToNoteIDs>11</PointsToNoteIDs>
+    </Note>
+    <Note ID="11" FontSize="14.0" Position="389.0,314.2" Width="195.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.786 0.9204 0.9961</Fill>
+      </Appearance>
+      <String>Election Integrity Partnership</String>
+      <ConnectedNoteIDs>10, 12, 16-19</ConnectedNoteIDs>
+      <PointsToNoteIDs>12, 16-19</PointsToNoteIDs>
+    </Note>
+    <Note ID="12" FontSize="14.0" Position="355.3,373.4" Width="41.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.786 0.9204 0.9961</Fill>
+      </Appearance>
+      <String>SIO</String>
+      <ConnectedNoteIDs>11</ConnectedNoteIDs>
+    </Note>
+    <Note ID="16" FontSize="14.0" Position="411.1,373.0" Width="40.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.786 0.9204 0.9961</Fill>
+      </Appearance>
+      <String>CIP</String>
+      <ConnectedNoteIDs>11</ConnectedNoteIDs>
+    </Note>
+    <Note ID="17" FontSize="14.0" Position="463.5,373.0" Width="73.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.786 0.9204 0.9961</Fill>
+      </Appearance>
+      <String>DFR Lab</String>
+      <ConnectedNoteIDs>11</ConnectedNoteIDs>
+    </Note>
+    <Note ID="18" FontSize="14.0" Position="542.8,373.0" Width="73.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.786 0.9204 0.9961</Fill>
+      </Appearance>
+      <String>Graphika</String>
+      <ConnectedNoteIDs>11</ConnectedNoteIDs>
+    </Note>
+    <Note ID="19" FontSize="14.0" Position="639.6,308.8" Width="200.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.786 0.9204 0.9961</Fill>
+      </Appearance>
+      <String>Election Integrity Partnership report on the 2020 election:</String>
+      <ConnectedNoteIDs>11, 21</ConnectedNoteIDs>
+      <PointsToNoteIDs>21</PointsToNoteIDs>
+    </Note>
+    <Note ID="21" FontSize="14.0" Position="860.3,316.3" Width="200.0">
+      <Appearance>
+        <Alignment>Center</Alignment>
+        <Border Weight="1"/>
+        <Fill>0.786 0.9204 0.9961</Fill>
+      </Appearance>
+      <String>New Note</String>
+      <ConnectedNoteIDs>19</ConnectedNoteIDs>
+    </Note>
+  </Notes>
+  <BackgroundShapes/>
+  <AutoFit>0-1, 3, 6, 8-9, 11-12, 16-18</AutoFit>
+  <NoteStyles>
+    <Style Name="Bubble (Blue)" ID="2CF52CDB-7EA7-4F7E-948E-2C6FF56E53EF" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+      <BorderThickness>1</BorderThickness>
+      <BorderColor>0.668962 0.810287 0.895092</BorderColor>
+      <FillColor>0.743291 0.900319 0.994547</FillColor>
+    </Style>
+    <Style Name="Bubble (Green)" ID="FCC37D13-0CE7-4C54-92BA-7C8960D64B39" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+      <BorderThickness>1</BorderThickness>
+      <BorderColor>0.669404 0.885265 0.567007</BorderColor>
+      <FillColor>0.743782 0.983628 0.630008</FillColor>
+    </Style>
+    <Style Name="Bubble (Pink)" ID="56C7BE4B-1CCA-43CF-A322-E711C19875B9" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+      <BorderThickness>1</BorderThickness>
+      <BorderColor>0.894547 0.707772 0.715904</BorderColor>
+      <FillColor>0.989115 0.814114 0.999483</FillColor>
+    </Style>
+    <Style Name="Bubble (Red)" ID="9739413D-6F4A-49BB-89DF-F750D7390642" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+      <BorderThickness>1</BorderThickness>
+      <BorderColor>0.894547 0.707772 0.715904</BorderColor>
+      <FillColor>0.993941 0.786413 0.795449</FillColor>
+    </Style>
+    <Style Name="Bubble (Yellow)" ID="F5E9BF61-3AC0-4B0B-B704-485A1F3742CA" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+      <BorderThickness>1</BorderThickness>
+      <BorderColor>0.877748 0.828289 0.562126</BorderColor>
+      <FillColor>0.975275 0.920321 0.624584</FillColor>
+    </Style>
+    <Style Name="Red Text" ID="CFC652B0-6947-498B-9F16-3755FB100DAB" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+      <TextColor>0.985954 0.0 0.02694</TextColor>
+    </Style>
+    <Style Name="Title Text" ID="DF24014B-7FE0-4981-BA5F-C7E1FB520502" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+      <FontSize>28.0</FontSize>
+      <IsBold>Yes</IsBold>
+    </Style>
+  </NoteStyles>
+  <UISettings>
+    <BackgroundColor>0.999763 0.988395 0.949915</BackgroundColor>
+    <DefaultFont>Helvetica</DefaultFont>
+    <NoteXPadding>8.0</NoteXPadding>
+  </UISettings>
+  <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"/>
+</ScappleDocument>

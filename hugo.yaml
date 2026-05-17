@@ -1,0 +1,28 @@
+baseURL: 'https://glenn.thedixons.net'
+locale: 'en-us'
+title: 'Reasonable Conclusions'
+disablePathToLower: true
+
+module:
+  proxy: "direct"
+  # uncomment line below for temporary local development of module
+  # replacements: "github.com/google/docsy -> ../../docsy"
+  hugoVersion:
+    extended: true
+    min: "0.157.0"
+  imports:
+    path: "github.com/google/docsy"
+    disable: false
+
+params:
+  ui:
+    sidebar_menu_compact: true
+    ul_show: 1
+    sidebar_menu_foldable: true
+    sidebar_cache_limit: 1000
+
+permalinks:
+  page:
+    docs: /:sections[1:]/:slug
+  section:
+    docs: /:sections[1:]
