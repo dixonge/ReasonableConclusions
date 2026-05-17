@@ -40,3 +40,4 @@ security:
     permissions:
       allowAddons: true
       allowChildProcess: true
+      - --allow-fs-read=.
