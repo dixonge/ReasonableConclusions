@@ -34,4 +34,4 @@ security:
       - ^postcss$
   node:
     permissions:
-      - --allow-fs-read=.
+      - --allow-fs-read=/
