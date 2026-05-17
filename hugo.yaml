@@ -12,7 +12,7 @@ module:
     min: "0.157.0"
   imports:
     path: "github.com/google/docsy"
-    disable: false
+   # disable: false
 
 params:
   ui:
