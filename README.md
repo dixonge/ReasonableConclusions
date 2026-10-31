@@ -23,6 +23,8 @@ The note itself, in your own words.
 
 `date` can be a year (`2003`), a month (`2020-04`), or a full day (`2022-04-17`). If the date is a guess, add `date_confidence: "approximate"`. `summary` is the one line that shows on the folded older notes.
 
+Add `draft: true` while a note is not ready. A draft is left out of the site: no page, no line on the topic, no sidebar link, no search hit, and no redirect to it. Leave the line out, or set `draft: false`, when you want it published. If every note in a topic is a draft, that topic is hidden too.
+
 To start a new topic, make a folder with an `_index.md`:
 
 ```markdown

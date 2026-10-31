@@ -241,6 +241,9 @@ class Section:
     def sort_oldest(self) -> bool:
         return str(self.meta.get("sort") or "") == "oldest"
 
+    # True when the folder had notes and every one of them is a draft.
+    had_drafts_only: bool = False
+
 
 @dataclass
 class Page:
@@ -249,6 +252,13 @@ class Page:
     meta: dict
     body: str
     html: str = ""
+
+
+def is_draft(meta: dict) -> bool:
+    value = meta.get("draft", False)
+    if isinstance(value, str):
+        return value.strip().lower() == "true"
+    return value is True
 
 
 def load_note(path: Path) -> Note:
@@ -266,13 +276,19 @@ def load_section(path: Path, url: str) -> Section:
     if index.exists():
         meta, _ = split_front_matter(index.read_text(encoding="utf-8"))
     section = Section(path=path, slug=path.name, url=url, meta=meta)
+    saw_note = False
     for child in sorted(path.iterdir(), key=lambda p: p.name.lower()):
         if child.name.startswith(".") or child.name.startswith("_"):
             continue
         if child.is_dir():
             section.children.append(load_section(child, url + child.name + "/"))
         elif child.suffix == ".md":
-            section.notes.append(load_note(child))
+            saw_note = True
+            note = load_note(child)
+            if is_draft(note.meta):
+                continue
+            section.notes.append(note)
+    section.had_drafts_only = saw_note and not section.notes
     reverse = not section.sort_oldest
     section.notes.sort(key=lambda n: sort_key(n.meta), reverse=reverse)
     section.children.sort(key=lambda s: (s.order, s.title.lower()))
@@ -584,7 +600,40 @@ def walk_publish(site, section: Section, ancestors, sections, pages, out: Path, 
         walk_publish(site, child, ancestors + [(section.url, section.title)], sections, pages, out, search)
 
 
-def redirect_lines() -> list[str]:
+def section_is_visible(section: Section) -> bool:
+    if section.notes or section.children:
+        return True
+    if section.placeholder and not section.had_drafts_only:
+        return True
+    return False
+
+
+def prune_hidden(section: Section) -> bool:
+    section.children = [child for child in section.children if prune_hidden(child)]
+    return section_is_visible(section)
+
+
+def published_urls(sections: list[Section]) -> set[str]:
+    urls = {"/", "/about-me/", "/search/"}
+
+    def walk(section: Section) -> None:
+        urls.add(section.url)
+        for note in section.notes:
+            urls.add(note.url)
+        for _order, kind, payload in nav_entries(section):
+            if kind == "group":
+                name, members = payload
+                if members:
+                    urls.add(section.url + slugify(name) + "/")
+        for child in section.children:
+            walk(child)
+
+    for section in sections:
+        walk(section)
+    return urls
+
+
+def redirect_lines(published: set[str]) -> list[str]:
     lines = {}
 
     def add(src: str, dest: str) -> None:
@@ -607,6 +656,9 @@ def redirect_lines() -> list[str]:
             cap = parts[0][:1].upper() + parts[0][1:]
             variants.add("/" + "/".join([cap, *parts[1:]]) + "/")
             variants.add("/" + "/".join([cap, *[p.lower() for p in parts[1:]]]) + "/")
+        target = dest if dest.endswith("/") else dest + "/"
+        if target not in published:
+            continue
         for variant in variants:
             add(variant, dest)
     ordered = sorted(lines)
@@ -637,6 +689,7 @@ def main() -> None:
     for child in sorted(CONTENT.iterdir(), key=lambda p: p.name.lower()):
         if child.is_dir() and (child / "_index.md").exists():
             sections.append(load_section(child, f"/{child.name}/"))
+    sections = [section for section in sections if prune_hidden(section)]
     sections.sort(key=lambda s: (s.order, s.title.lower()))
     for section in sections:
         attach_bodies(section)
@@ -690,7 +743,10 @@ def main() -> None:
     (out / "404.html").write_text(not_found, encoding="utf-8")
 
     (out / "search-index.json").write_text(json.dumps(search, ensure_ascii=False), encoding="utf-8")
-    (out / "_redirects").write_text("\n".join(redirect_lines()) + "\n", encoding="utf-8")
+    (out / "_redirects").write_text(
+        "\n".join(redirect_lines(published_urls(sections))) + "\n",
+        encoding="utf-8",
+    )
     shutil.copytree(ASSETS, out / "assets")
     if MEDIA.exists():
         shutil.copytree(MEDIA, out / "media")
