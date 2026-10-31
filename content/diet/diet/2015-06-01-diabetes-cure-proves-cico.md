@@ -1,7 +1,7 @@
 ---
-title: "How My Wife Cured Her Type II Diabetes"
+title: "Diabetes Cure Proves Calories-in, Calories-out"
 date: "2015-06-01"
-summary: "Eight weeks of severe calorie restriction put Dixie's type II diabetes into remission, and a year later it was still gone."
+summary: "Eight weeks of severe calorie restriction put Bryn's type II diabetes into remission, and a decade later it is still gone."
 source: "ghaw"
 source_note: "ghaw content/post/how-my-wife-cured-her-type-ii-diabetes.md, dated 2015-06-01. The closing UPDATE (about a year later) is kept in this same note. The glucose-tester photo is the post's image."
 ---
@@ -50,10 +50,10 @@ These results tore a bit of a hole in Taubes' theories. His writing indicated th
 
 One group at Newcastle University in the U.K. came up with a different concept, something they refer to as the Twin Cycle Hypothesis. To test it they decided to skip the actual mechanism and simply attempt to mimic the results. Since insulin recovery often occurred in bariatric patients long before any weight loss, it was theorized that perhaps it was simply the caloric restriction that set things in motion, resulting in a removal of fat around the pancreas and liver. To test this they put patients on an 800-calorie diet for 8 weeks. The results were very similar to those observed in the bariatric patients! This line of thinking/testing has resulted in some very clear guidance, at least on [Newcastle University's web site](http://www.ncl.ac.uk/magres/research/diabetes/reversal.htm).
 
-So Dixie basically thought "Hey, why not?" So she spent eight weeks eating an average of around 700 calories per day, mostly veggies combined with shakes from GNC. And no, not 'protein' shakes. Her diet ended up being around 50% carbohydrates. I can't begin to tell you how amazed I am at her willpower. She even stuck with it when she was hit by some sort of amoebic or parasitic intestinal invasion. Her bowels recovered. She lost quite a bit of weight too! She is definitely more thin than she has been for the last 20 years or so. But the real question is, what about her Type II Diabetes?
+So Bryn basically thought "Hey, why not?" So she spent eight weeks eating an average of around 700 calories per day, mostly veggies combined with shakes from GNC. And no, not 'protein' shakes. Her diet ended up being around 50% carbohydrates. I can't begin to tell you how amazed I am at her willpower. She even stuck with it when she was hit by some sort of amoebic or parasitic intestinal invasion. Her bowels recovered. She lost quite a bit of weight too! She is definitely more thin than she has been for the last 20 years or so. But the real question is, what about her Type II Diabetes?
 
 She took her blood glucose readings all during the diet. The numbers all dropped, but the real test was what would happen when she went off of her Metformin. So she stopped taking it the day after her diet ended.
 
 Amazingly, her blood glucose levels are all still in the normal range, both when she first wakes up in the morning and after meals. So far, it appears to have done the trick. No more medicine, no more fear that her longevity might be in danger. **_Technically, she's not diabetic any more!_**
 
-UPDATE: It has now been about a year since Dixie started her 2-month diet. She still occasionally tests her glucose levels -- sometimes first thing in the morning, sometimes after meals. All readings are still in the 'normal' non-diabetic range. Her HBA1C bloodwork from the lab confirms the same.
+UPDATE: It has now been about a year since Bryn started her 2-month diet. She still occasionally tests her glucose levels -- sometimes first thing in the morning, sometimes after meals. All readings are still in the 'normal' non-diabetic range. Her HBA1C bloodwork from the lab confirms the same.

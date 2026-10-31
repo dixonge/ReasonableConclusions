@@ -1,5 +1,5 @@
 ---
-title: "Love Your Enemas"
+title: "An Experiment in Satiety"
 date: "2013-08-10"
 summary: "A flavorless-calorie experiment in Nicaragua ended in an impaction, an enema, and a warning about too much fat."
 source: "vagabondians"
