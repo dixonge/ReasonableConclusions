@@ -1,0 +1,15 @@
+# Site identity. The same build can later serve another site by
+# changing this file and the folders under content/.
+# Hierarchy is whatever depth you put on disk:
+#   category / topic / era note
+#   or country / state / city / article
+#   or surname / ancestor
+# A folder with _index.md is a section. Other .md files in that
+# folder are era notes, newest first (set sort: oldest to reverse).
+title: "Reasonable Conclusions"
+tagline: "This is not a blog!"
+description: "Observations and thoughts on science, politics, religion, and a few things in between."
+domain: "glenn.thedixons.net"
+base_url: "https://glenn.thedixons.net"
+language: "en"
+output_dir: "public"

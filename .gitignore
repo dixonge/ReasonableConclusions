@@ -1,10 +1,7 @@
-# Generated files by hugo
-/public/
-/resources/_gen/
-
-# Temporary lock file while building
-.hugo_build.lock
-
-# Optional: Local environment files
+public/
+__pycache__/
+*.pyc
 .DS_Store
+.hugo_build.lock
 node_modules/
+resources/

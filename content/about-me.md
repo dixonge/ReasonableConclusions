@@ -1,9 +1,5 @@
 ---
-Title: About Me
-weight: 2
-type: docs
-description: >
-  About me
+title: "About Me"
 ---
 
 | FROM                             | TO                                   | DATE CHANGED           |
