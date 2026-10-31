@@ -209,8 +209,15 @@ class Note:
         return str(self.meta.get("summary") or "")
 
     @property
+    def title(self) -> str:
+        return str(self.meta.get("title") or "").strip()
+
+    @property
     def heading(self) -> str:
-        return f"{self.when} – {self.summary}" if self.summary else self.when
+        dated = f"{self.when} – {self.summary}" if self.summary else self.when
+        if self.title:
+            return f"{self.title} — {dated}"
+        return dated
 
 
 @dataclass
@@ -438,6 +445,17 @@ def write_page(out: Path, url: str, html_text: str) -> None:
     dest.write_text(html_text, encoding="utf-8")
 
 
+def era_head(note: Note, name_tag: str) -> str:
+    title = html.escape(note.title or "Note")
+    dated = f'<span class="when">{html.escape(note.when)}</span>'
+    if note.summary:
+        dated += f" – {html.escape(note.summary)}"
+    return (
+        f'<div class="era-head"><{name_tag} class="era-name">{title}</{name_tag}>'
+        f'<p class="era-sub">{dated}</p></div>'
+    )
+
+
 def render_note_block(note: Note, newest: bool) -> str:
     link = f'<p class="permalink"><a href="{note.url}">Permalink</a></p>'
     meta = source_line(note)
@@ -445,13 +463,12 @@ def render_note_block(note: Note, newest: bool) -> str:
         return (
             f'<article class="era era-current" id="{html.escape(note.slug)}">'
             f'<p class="era-kicker">Current view</p>'
-            f"<h2>{html.escape(note.heading)}</h2>{meta}"
+            f"{era_head(note, 'h2')}{meta}"
             f'<div class="prose">{note.html}</div>{link}</article>'
         )
     return (
         f'<details class="era" id="{html.escape(note.slug)}">'
-        f"<summary><span class=\"when\">{html.escape(note.when)}</span>"
-        f" – {html.escape(note.summary)}</summary>"
+        f"<summary>{era_head(note, 'span')}</summary>"
         f"{meta}<div class=\"prose\">{note.html}</div>{link}</details>"
     )
 
@@ -577,7 +594,8 @@ def walk_publish(site, section: Section, ancestors, sections, pages, out: Path, 
         )
         inner = (
             f"{crumbs(trail)}<h1>{html.escape(note.meta.get('title') or section.title)}</h1>"
-            f"<p class=\"era-meta\">{html.escape(note.heading)}</p>{source_line(note)}"
+            f"<p class=\"era-meta\">{html.escape(note.when)}"
+            f"{' – ' + html.escape(note.summary) if note.summary else ''}</p>{source_line(note)}"
             f'<div class="prose">{note.html}</div>'
             f'<p class="permalink"><a href="{section.url}">All eras of {html.escape(section.title)}</a></p>'
             f"<ul class=\"card-list\">{others}</ul>"
@@ -614,7 +632,7 @@ def prune_hidden(section: Section) -> bool:
 
 
 def published_urls(sections: list[Section]) -> set[str]:
-    urls = {"/", "/about-me/", "/search/"}
+    urls = {"/", "/search/"}
 
     def walk(section: Section) -> None:
         urls.add(section.url)
@@ -681,10 +699,11 @@ def main() -> None:
         shutil.rmtree(out)
     out.mkdir(parents=True)
 
-    pages = [
-        load_page(CONTENT / "home.md", "/"),
-        load_page(CONTENT / "about-me.md", "/about-me/"),
-    ]
+    home = load_page(CONTENT / "home.md", "/")
+    about = load_page(CONTENT / "about-me.md", "/about-me/")
+    pages = [home]
+    if not is_draft(about.meta):
+        pages.append(about)
     sections = []
     for child in sorted(CONTENT.iterdir(), key=lambda p: p.name.lower()):
         if child.is_dir() and (child / "_index.md").exists():
@@ -698,17 +717,18 @@ def main() -> None:
     table = thinking_html(thinking)
     search: list[dict] = []
 
-    write_page(out, "/", render_home(site, pages[0], sections, pages, table))
-    write_page(out, "/about-me/", render_simple(site, pages[1], sections, pages))
-    search.append({
-        "title": pages[1].title,
-        "topic": "About",
-        "category": "About",
-        "when": "",
-        "summary": "",
-        "url": "/about-me/",
-        "text": plain_text(pages[1].html),
-    })
+    write_page(out, "/", render_home(site, home, sections, pages, table))
+    if not is_draft(about.meta):
+        write_page(out, "/about-me/", render_simple(site, about, sections, pages))
+        search.append({
+            "title": about.title,
+            "topic": "About",
+            "category": "About",
+            "when": "",
+            "summary": "",
+            "url": "/about-me/",
+            "text": plain_text(about.html),
+        })
     search.append({
         "title": "Home",
         "topic": "Home",
@@ -743,8 +763,12 @@ def main() -> None:
     (out / "404.html").write_text(not_found, encoding="utf-8")
 
     (out / "search-index.json").write_text(json.dumps(search, ensure_ascii=False), encoding="utf-8")
+    published = published_urls(sections)
+    for page in pages:
+        if page.url != "/":
+            published.add(page.url if page.url.endswith("/") else page.url + "/")
     (out / "_redirects").write_text(
-        "\n".join(redirect_lines(published_urls(sections))) + "\n",
+        "\n".join(redirect_lines(published)) + "\n",
         encoding="utf-8",
     )
     shutil.copytree(ASSETS, out / "assets")
