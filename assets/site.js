@@ -20,6 +20,16 @@
     themeBtn.textContent = isDark ? "Light" : "Dark";
   }
 
+  var menuBtn = document.getElementById("menu");
+  var drawer = document.getElementById("site-nav");
+  if (menuBtn && drawer) {
+    menuBtn.addEventListener("click", function () {
+      var open = drawer.classList.toggle("is-open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      menuBtn.textContent = open ? "Close" : "Menu";
+    });
+  }
+
   var navKey = "rc-sidebar";
   document.querySelectorAll("details[data-nav]").forEach(function (node) {
     var id = node.getAttribute("data-nav");

@@ -163,11 +163,16 @@ img { max-width: 100%; height: auto; }
 }
 
 .sidebar-drawer { background: var(--sidebar); border-right: 1px solid var(--line); }
-.sidebar-drawer > summary {
+.menu-toggle {
+  display: none;
   font-family: var(--ui);
+  font-size: 0.85rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
   cursor: pointer;
-  padding: 0.7rem 1rem;
-  font-weight: 650;
 }
 .sidebar {
   padding: 0.8rem 0.75rem 2rem;
@@ -362,13 +367,11 @@ footer.site {
   border: 0;
 }
 
-@media (min-width: 860px) {
-  .sidebar-drawer > summary { display: none; }
-  .sidebar-drawer > .sidebar { display: block !important; }
-}
-
 @media (max-width: 859px) {
   .shell { grid-template-columns: 1fr; }
+  .menu-toggle { display: inline-block; }
+  .sidebar-drawer { display: none; }
+  .sidebar-drawer.is-open { display: block; }
   .sidebar { position: static; max-height: none; }
   .topbar { flex-wrap: wrap; }
   .top-tools { width: 100%; }

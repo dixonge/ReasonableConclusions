@@ -348,9 +348,9 @@ def sidebar_html(sections: list[Section], pages: list[Page], current: str) -> st
         home_links.append(f'<a href="{page.url}"{attr}>{html.escape(page.title if page.url != "/" else "Home")}</a>')
     blocks = [render_section_nav(section, current) for section in sections]
     return (
-        '<details class="sidebar-drawer"><summary>Menu</summary>'
+        '<aside class="sidebar-drawer" id="site-nav">'
         f'<nav class="sidebar" aria-label="Sections"><div class="nav-home">{"".join(home_links)}</div>'
-        f'{"".join(blocks)}</nav></details>'
+        f'{"".join(blocks)}</nav></aside>'
     )
 
 
@@ -394,6 +394,7 @@ def layout(site: dict, title: str, current: str, body: str, sections, pages, des
 <header class="topbar">
   <a class="brand" href="/">{html.escape(str(site['title']))}<small>{html.escape(str(site.get('tagline') or ''))}</small></a>
   <div class="top-tools">
+    <button type="button" class="menu-toggle" id="menu" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <form class="search" action="/search/" method="get" role="search">
       <label class="visually-hidden" for="q">Search notes</label>
       <input id="q" name="q" type="search" placeholder="Search notes" autocomplete="off">
