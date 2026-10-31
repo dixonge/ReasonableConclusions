@@ -1,5 +1,5 @@
 ---
-title: "COVID-19"
+title: "COVID-19 - Update"
 date: "2021-06-27"
 summary: "Still open: death estimates, aerosols, variants, and lab leak versus a natural origin."
 source: "ReasonableConclusions"

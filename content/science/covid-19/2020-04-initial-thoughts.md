@@ -1,5 +1,5 @@
 ---
-title: "COVID-19"
+title: "COVID-19 - Initial Thoughts"
 date: "2020-03"
 date_end: "2020-04"
 label: "2020"

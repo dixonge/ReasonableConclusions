@@ -1,5 +1,5 @@
 ---
-title: "COVID-19"
+title: "COVID-19 - Lockdowns and Variants"
 date: "2022-04-17"
 summary: "Lockdowns may have favored more dangerous variants, and Delta was not clearly more severe."
 source: "ReasonableConclusions"

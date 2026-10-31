@@ -1,5 +1,5 @@
 ---
-title: "COVID-19"
+title: "COVID-19 - Forbidden Topics"
 date: "2022-03-17"
 summary: "The early COVID takes were bent by Trump coverage, and off-label treatment was pushed out of the debate."
 source: "ReasonableConclusions"
