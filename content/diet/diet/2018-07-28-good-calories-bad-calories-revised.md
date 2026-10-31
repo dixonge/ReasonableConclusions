@@ -1,5 +1,5 @@
 ---
-title: "Good Calories, Bad Calories"
+title: "Good Calories, Bad Calories - A Revised View"
 date: "2018-07-28"
 summary: "Ten years later the Taubes book looks like bias, and weight comes down to calories in, calories out."
 source: "gtd-hugo"
