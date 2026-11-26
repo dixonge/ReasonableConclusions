@@ -299,7 +299,7 @@ var mdConverter goldmark.Markdown
 
 func initMD() {
 	mdConverter = goldmark.New(
-		goldmark.WithExtensions(gmext.GFM, gmext.Footnote, gmext.DefinitionList),
+		goldmark.WithExtensions(gmext.Table, gmext.Footnote, gmext.DefinitionList),
 		goldmark.WithRendererOptions(gmhtml.WithUnsafe()),
 	)
 }
@@ -366,6 +366,19 @@ func normaliseAttrs(s string) string {
 	// footnote anchor: reorder + drop role
 	reFn := regexp.MustCompile(`<a href="(#[^"]*)" class="footnote-ref" role="doc-noteref">`)
 	s = reFn.ReplaceAllString(s, `<a class="footnote-ref" href="$1">`)
+	// footnote container
+	s = strings.ReplaceAll(s, `<div class="footnotes" role="doc-endnotes">`, `<div class="footnote">`)
+	// merge adjacent blockquotes
+	s = strings.ReplaceAll(s, "</blockquote>\n<blockquote>", "\n")
+	// &quot; -> " only in text nodes (between > and <)
+	reQ := regexp.MustCompile(`>([^<]*)&quot;([^<]*)<`)
+	for {
+		ns := reQ.ReplaceAllString(s, `>$1"$2<`)
+		if ns == s {
+			break
+		}
+		s = ns
+	}
 	return s
 }
 
