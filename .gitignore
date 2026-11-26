@@ -5,3 +5,4 @@ __pycache__/
 .hugo_build.lock
 node_modules/
 resources/
+rc
