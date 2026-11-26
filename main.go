@@ -363,8 +363,8 @@ func plainText(htmlText string) string {
 	text := regexp.MustCompile(`(?s)<script.*?</script>`).ReplaceAllString(htmlText, " ")
 	text = regexp.MustCompile(`<[^>]+>`).ReplaceAllString(text, " ")
 	text = html.UnescapeString(text)
-	text = regexp.MustCompile(`\s+`).ReplaceAllString(text, " ")
-	return strings.TrimSpace(text)
+	fields := strings.Fields(text)
+	return strings.Join(fields, " ")
 }
 
 func isDraft(meta map[string]any) bool {
