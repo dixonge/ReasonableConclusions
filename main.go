@@ -314,32 +314,10 @@ func mdToHTML(text string) string {
 	re2 := regexp.MustCompile(`(?m)^https://(?:www\.)?youtube\.com/watch\?v=([\w-]{6,})\s*$`)
 	text = re2.ReplaceAllStringFunc(text, func(m string) string {
 		sub := re2.FindStringSubmatch(m)
-		return `<iframe class="video" src="https://www.youtube.com/embed/` + sub[1] + `" title="YouTube video" allowfullscreen loading="lazy"></iframe>`
+		return "\n\n<iframe class=\"video\" src=\"https://www.youtube.com/embed/" + sub[1] + "\" title=\"YouTube video\" allowfullscreen loading=\"lazy\"></iframe>\n\n"
 	})
 	re3 := regexp.MustCompile(`~~(.+?)~~`)
 	text = re3.ReplaceAllString(text, `<del>$1</del>`)
-
-	// lazy continuation: end a quote when a non-quote line follows directly
-	lines := strings.Split(text, "\n")
-	out := make([]string, 0, len(lines))
-	inFence := false
-	for i := 0; i < len(lines); i++ {
-		out = append(out, lines[i])
-		trimmed := strings.TrimSpace(lines[i])
-		if strings.HasPrefix(trimmed, "```") {
-			inFence = !inFence
-		}
-		if inFence {
-			continue
-		}
-		if strings.HasPrefix(trimmed, ">") && i+1 < len(lines) {
-			next := strings.TrimSpace(lines[i+1])
-			if next != "" && !strings.HasPrefix(next, ">") {
-				out = append(out, "")
-			}
-		}
-	}
-	text = strings.Join(out, "\n")
 
 	var buf strings.Builder
 	if err := mdConverter.Convert([]byte(text), &buf); err != nil {
@@ -388,12 +366,22 @@ func normaliseAttrs(s string) string {
 	// footnote anchor: reorder + drop role
 	reFn := regexp.MustCompile(`<a href="(#[^"]*)" class="footnote-ref" role="doc-noteref">`)
 	s = reFn.ReplaceAllString(s, `<a class="footnote-ref" href="$1">`)
-	reBr := regexp.MustCompile(`<a href="(#[^"]*)" class="footnote-backref" role="[^"]*">[^<]*</a>`)
-	s = reBr.ReplaceAllString(s, `<a class="footnote-backref" href="$1" title="Jump back to footnote 1 in the text">&#8617;</a>`)
+	reBr := regexp.MustCompile(`<a href="#fnref:([0-9]+)" class="footnote-backref" role="[^"]*">[^<]*</a>`)
+	s = reBr.ReplaceAllStringFunc(s, func(m string) string {
+		sub := reBr.FindStringSubmatch(m)
+		return `<a class="footnote-backref" href="#fnref:` + sub[1] + `" title="Jump back to footnote ` + sub[1] + ` in the text">&#8617;</a>`
+	})
 	// footnote container
 	s = strings.ReplaceAll(s, `<div class="footnotes" role="doc-endnotes">`, `<div class="footnote">`)
 	// merge adjacent blockquotes
 	s = regexp.MustCompile(`</blockquote>\s*\n\s*<blockquote>`).ReplaceAllString(s, "\n")
+	// collapse blank lines inside blockquote bodies
+	reBQ := regexp.MustCompile(`(?s)<blockquote>(.*?)</blockquote>`)
+	s = reBQ.ReplaceAllStringFunc(s, func(m string) string {
+		sub := reBQ.FindStringSubmatch(m)
+		body := regexp.MustCompile(`</p>\n\s*\n<p>`).ReplaceAllString(sub[1], "</p>\n<p>")
+		return "<blockquote>" + body + "</blockquote>"
+	})
 	// &quot; -> " only in text nodes (between > and <)
 	reQ := regexp.MustCompile(`>([^<]*)&quot;([^<]*)<`)
 	for {
