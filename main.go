@@ -8,6 +8,7 @@ import (
 
 	"github.com/yuin/goldmark"
 	gmext "github.com/yuin/goldmark/extension"
+	gmhtml "github.com/yuin/goldmark/renderer/html"
 )
 
 var (
@@ -298,7 +299,8 @@ var mdConverter goldmark.Markdown
 
 func initMD() {
 	mdConverter = goldmark.New(
-		goldmark.WithExtensions(gmext.GFM, gmext.Footnote, gmext.DefinitionList, gmext.Typographer),
+		goldmark.WithExtensions(gmext.GFM, gmext.Footnote, gmext.DefinitionList),
+		goldmark.WithRendererOptions(gmhtml.WithUnsafe()),
 	)
 }
 
@@ -321,7 +323,11 @@ func mdToHTML(text string) string {
 	if err := mdConverter.Convert([]byte(text), &buf); err != nil {
 		panic(err)
 	}
-	return buf.String()
+	out := buf.String()
+	out = strings.TrimRight(out, "\n")
+	// attribute-order normalisation to match Python-Markdown extra
+	out = normaliseAttrs(out)
+	return out
 }
 
 func inlineMD(text string) string {
@@ -353,6 +359,16 @@ func isDraft(meta map[string]any) bool {
 }
 
 // ... main etc
+func normaliseAttrs(s string) string {
+	// img: src then alt -> alt then src
+	reImg := regexp.MustCompile(`<img src="([^"]*)" alt="([^"]*)"`)
+	s = reImg.ReplaceAllString(s, `<img alt="$2" src="$1"`)
+	// footnote anchor: reorder + drop role
+	reFn := regexp.MustCompile(`<a href="(#[^"]*)" class="footnote-ref" role="doc-noteref">`)
+	s = reFn.ReplaceAllString(s, `<a class="footnote-ref" href="$1">`)
+	return s
+}
+
 func main() {
 	initMD()
 	fmt.Println("not implemented fully")
