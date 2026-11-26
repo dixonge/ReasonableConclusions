@@ -319,15 +319,37 @@ func mdToHTML(text string) string {
 	re3 := regexp.MustCompile(`~~(.+?)~~`)
 	text = re3.ReplaceAllString(text, `<del>$1</del>`)
 
+	// lazy continuation: end a quote when a non-quote line follows directly
+	lines := strings.Split(text, "\n")
+	out := make([]string, 0, len(lines))
+	inFence := false
+	for i := 0; i < len(lines); i++ {
+		out = append(out, lines[i])
+		trimmed := strings.TrimSpace(lines[i])
+		if strings.HasPrefix(trimmed, "```") {
+			inFence = !inFence
+		}
+		if inFence {
+			continue
+		}
+		if strings.HasPrefix(trimmed, ">") && i+1 < len(lines) {
+			next := strings.TrimSpace(lines[i+1])
+			if next != "" && !strings.HasPrefix(next, ">") {
+				out = append(out, "")
+			}
+		}
+	}
+	text = strings.Join(out, "\n")
+
 	var buf strings.Builder
 	if err := mdConverter.Convert([]byte(text), &buf); err != nil {
 		panic(err)
 	}
-	out := buf.String()
-	out = strings.TrimRight(out, "\n")
+	rendered := buf.String()
+	rendered = strings.TrimRight(rendered, "\n")
 	// attribute-order normalisation to match Python-Markdown extra
-	out = normaliseAttrs(out)
-	return out
+	rendered = normaliseAttrs(rendered)
+	return rendered
 }
 
 func inlineMD(text string) string {
@@ -366,10 +388,12 @@ func normaliseAttrs(s string) string {
 	// footnote anchor: reorder + drop role
 	reFn := regexp.MustCompile(`<a href="(#[^"]*)" class="footnote-ref" role="doc-noteref">`)
 	s = reFn.ReplaceAllString(s, `<a class="footnote-ref" href="$1">`)
+	reBr := regexp.MustCompile(`<a href="(#[^"]*)" class="footnote-backref" role="[^"]*">[^<]*</a>`)
+	s = reBr.ReplaceAllString(s, `<a class="footnote-backref" href="$1" title="Jump back to footnote 1 in the text">&#8617;</a>`)
 	// footnote container
 	s = strings.ReplaceAll(s, `<div class="footnotes" role="doc-endnotes">`, `<div class="footnote">`)
 	// merge adjacent blockquotes
-	s = strings.ReplaceAll(s, "</blockquote>\n<blockquote>", "\n")
+	s = regexp.MustCompile(`</blockquote>\s*\n\s*<blockquote>`).ReplaceAllString(s, "\n")
 	// &quot; -> " only in text nodes (between > and <)
 	reQ := regexp.MustCompile(`>([^<]*)&quot;([^<]*)<`)
 	for {
