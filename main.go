@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"html"
@@ -103,6 +104,16 @@ type page struct {
 	Meta  map[string]any
 	Body  string
 	HTML  string
+}
+
+type searchEntry struct {
+	Title    string `json:"title"`
+	Topic    string `json:"topic"`
+	Category string `json:"category"`
+	When     string `json:"when"`
+	Summary  string `json:"summary"`
+	URL      string `json:"url"`
+	Text     string `json:"text"`
 }
 
 var months = []string{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
@@ -897,21 +908,21 @@ func main() {
 	thinking := parseYAML(string(thinkingRaw))
 	table := thinkingHTML(thinking)
 
-	search := []map[string]any{}
+	search := []searchEntry{}
 
 	writePage(out, "/", renderHome(site, home, sections, pages, table))
 	if !isDraft(about.Meta) {
 		writePage(out, "/about-me/", renderSimple(site, about, sections, pages))
-		search = append(search, map[string]any{
-			"title": about.Title, "topic": "About", "category": "About",
-			"when": "", "summary": "", "url": "/about-me/",
-			"text": plainText(about.HTML),
-		})
+		search = append(search, searchEntry{
+		Title: about.Title, Topic: "About", Category: "About",
+		When: "", Summary: "", URL: "/about-me/",
+		Text: plainText(about.HTML),
+	})
 	}
-	search = append(search, map[string]any{
-		"title": "Home", "topic": "Home", "category": "Home",
-		"when": "", "summary": plainText(inlineMD(fmt.Sprintf("%v", thinking["intro"]))),
-		"url": "/", "text": plainText(pages[0].HTML + " " + table),
+	search = append(search, searchEntry{
+		Title: "Home", Topic: "Home", Category: "Home",
+		When: "", Summary: plainText(inlineMD(fmt.Sprintf("%v", thinking["intro"]))),
+		URL: "/", Text: plainText(pages[0].HTML + " " + table),
 	})
 
 	for _, s := range sections {
@@ -933,7 +944,14 @@ func main() {
 	b, _ := json.Marshal(search)
 	// ensure_ascii false: use encoder
 	_ = b
-	jb, _ := json.Marshal(search)
+	var buf bytes.Buffer
+	enc := json.NewEncoder(&buf)
+	enc.SetEscapeHTML(false)
+	enc.Encode(search)
+	jb := bytes.TrimRight(buf.Bytes(), "\n")
+	jb = bytes.ReplaceAll(jb, []byte(`,"`), []byte(`, "`))
+	jb = bytes.ReplaceAll(jb, []byte(`:"`), []byte(`: "`))
+	jb = bytes.ReplaceAll(jb, []byte(`},{`), []byte(`}, {`))
 	os.WriteFile(filepath.Join(out, "search-index.json"), jb, 0644)
 
 	published := publishedURLs(sections)
@@ -1091,7 +1109,7 @@ func renderSimple(site map[string]any, page *page, sections []*Section, pages []
 	return layout(site, page.Title, page.URL, inner, sections, pages, "")
 }
 
-func walkPublish(site map[string]any, section *Section, ancestors [][2]string, sections []*Section, pages []*page, out string, search *[]map[string]any) {
+func walkPublish(site map[string]any, section *Section, ancestors [][2]string, sections []*Section, pages []*page, out string, search *[]searchEntry) {
 	if len(section.Children) > 0 {
 		writePage(out, section.URL, renderIndex(site, section, ancestors, sections, pages))
 	} else if len(section.Notes) > 0 || section.Placeholder() {
@@ -1143,24 +1161,24 @@ func walkPublish(site map[string]any, section *Section, ancestors [][2]string, s
 			}
 			return section.Title()
 		}(), n.URL, inner, sections, pages, n.Summary()))
-		*search = append(*search, map[string]any{
-			"title": func() string {
+		*search = append(*search, searchEntry{
+			Title: func() string {
 				if v, ok := n.Meta["title"]; ok && v != nil {
 					return fmt.Sprintf("%v", v)
 				}
 				return section.Title()
 			}(),
-			"topic":    section.Title(),
-			"category": func() string {
+			Topic: section.Title(),
+			Category: func() string {
 				if len(ancestors) > 0 {
 					return ancestors[len(ancestors)-1][1]
 				}
 				return section.Title()
 			}(),
-			"when":    n.When(),
-			"summary": n.Summary(),
-			"url":     n.URL,
-			"text":    plainText(n.HTML + " " + n.Summary() + " " + func() string {
+			When:    n.When(),
+			Summary: n.Summary(),
+			URL:     n.URL,
+			Text: plainText(n.HTML + " " + n.Summary() + " " + func() string {
 				if v, ok := n.Meta["title"]; ok && v != nil {
 					return fmt.Sprintf("%v", v)
 				}
