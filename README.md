@@ -42,9 +42,12 @@ Pictures go in `media/`. In a note, link them as `![](/media/your-file.jpg)`.
 
 ## Build
 
+The site is built by a single Go binary. No interpreter, no virtualenv, no
+Python version to match:
+
 ```bash
-pip install -r requirements.txt
-python3 build.py
+go build -o rc .
+./rc build
 ```
 
 That writes the site into `public/`. To look at it on your machine:
@@ -53,14 +56,34 @@ That writes the site into `public/`. To look at it on your machine:
 python3 -m http.server -d public
 ```
 
-Then open http://localhost:8000/
+Then open http://localhost:8000/ — any static file server will do.
+
+The Python build is kept as the reference while the port is under review:
+
+```bash
+pip install -r requirements.txt
+python3 build.py
+```
+
+Both write the same site. The one difference: the Go build trims trailing
+whitespace at a line break or before a closing tag, which Python keeps. That
+is invisible in a browser and affects 11 of 106 files. Everything else is
+byte-identical, including `_redirects`, `404.html` and `search-index.json`.
 
 ## Cloudflare Pages
 
-Do not deploy until Glenn says so. When he does, the Pages project settings are:
+Do not deploy until Glenn says so. The Pages project currently builds
+remotely with Python (`pip install -r requirements.txt && python3 build.py`).
 
-- Build command: `pip install -r requirements.txt && python3 build.py`
-- Output directory: `public`
+To publish the Go build, either:
+
+- build locally with `./rc build` and upload `public/` (for example
+  `wrangler pages deploy public`), so Cloudflare needs no Go toolchain; or
+- change the build command to `go build -o rc . && ./rc build`, but only if
+the Pages build image provides Go — that is not documented, so test it in a
+preview deployment first, not on the live site.
+
+Output directory stays `public`.
 
 The build writes `public/_redirects`, which sends the old Hugo addresses (including the mixed-case ones, the lowercase ones, and the misspelled `/science/Insect-Armaggedon/`) to the new pages.
 
